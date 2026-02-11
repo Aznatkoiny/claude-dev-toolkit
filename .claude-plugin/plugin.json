@@ -1,0 +1,22 @@
+{
+  "name": "claude-dev-toolkit",
+  "version": "1.0.0",
+  "description": "Comprehensive toolkit for building Claude Code extensions — skills, plugins, hooks, subagents, teams, MCP servers, and output styles. Includes 8 reference skills, 3 builder agents, 3 commands, hooks validation, and a developer output style.",
+  "author": {
+    "name": "Antony Zaki"
+  },
+  "homepage": "https://github.com/Aznatkoiny/claude-dev-toolkit",
+  "repository": "https://github.com/Aznatkoiny/claude-dev-toolkit",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "plugin-development",
+    "skills",
+    "hooks",
+    "subagents",
+    "mcp",
+    "agent-teams",
+    "output-styles",
+    "developer-tools"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "prompt",
+            "model": "haiku",
+            "prompt": "You are a Claude Code plugin convention validator. Check if the file that was just written or edited is a plugin component file (SKILL.md, plugin.json, hooks.json, agent .md, command .md, or output-style .md).\n\nIf it IS a plugin component, check for these convention violations:\n1. SKILL.md: Must have 'name' and 'description' in YAML frontmatter\n2. plugin.json: Must have 'name', 'version', and 'description' fields. Must be in .claude-plugin/ directory\n3. hooks.json: Must use ${CLAUDE_PLUGIN_ROOT} for script paths (not absolute paths)\n4. Agent .md: Must have 'name' and 'description' (with example blocks) in frontmatter\n5. Command .md: Must have 'description' in frontmatter\n6. No plugin components should be inside .claude-plugin/ directory (only manifests go there)\n\nIf the file is NOT a plugin component, or if it passes all checks, respond with just: APPROVE\n\nIf it fails a check, respond with a brief, actionable message starting with 'Convention note:' followed by what needs fixing. Keep it to 1-2 sentences."
+          }
+        ]
+      }
+    ]
+  }
+}
